@@ -18,14 +18,15 @@ export default class App extends Component{
 	clickMe(){
 		alert('history');
 		codePush.sync({
-				installMode :codePush.installMode.IMMEDIATE
-		});
+            updateDialog: true,
+            installMode: codePush.InstallMode.IMMEDIATE
+        });
 	}
 	render(){
 		return(
 		<TouchableOpacity onPress = {this.clickMe.bind(this)}>
 			<View style = {styles.box}>
-				<Text>Hello{this.props.name}. Please Click me</Text>
+				<Text>Hello{this.props.name}. Please Click me </Text>
 			</View>
 		</TouchableOpacity>
 		);
