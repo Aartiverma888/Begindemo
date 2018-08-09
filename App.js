@@ -7,14 +7,19 @@ import {
 	TouchableOpacity
 }from 'react-native';
 
+import codePush from "react-native-code-push";
+
 const instruction = Platform.select({
 ios : 'Press Cmd+T to reload',
 android: 'Double tap R',
 });
 
-export default class App extends Component<{}>{
+export default class App extends Component{
 	clickMe(){
 		alert('history');
+		codePush.sync({
+				installMode :codePush.installMode.IMMEDIATE
+		});
 	}
 	render(){
 		return(
