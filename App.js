@@ -26,7 +26,7 @@ export default class App extends Component{
 		return(
 		<TouchableOpacity onPress = {this.clickMe.bind(this)}>
 			<View style = {styles.box}>
-				<Text>Hello{this.props.name}. Please Click me================== </Text>
+				<Text>Hello{this.props.name}. Please Click me???? </Text>
 			</View>
 		</TouchableOpacity>
 		);
