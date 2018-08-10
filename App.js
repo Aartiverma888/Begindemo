@@ -16,7 +16,7 @@ android: 'Double tap R',
 
 export default class App extends Component{
 	clickMe(){
-		alert('history');
+		//alert('history');
 		codePush.sync({
             updateDialog: true,
             installMode: codePush.InstallMode.IMMEDIATE
@@ -26,6 +26,7 @@ export default class App extends Component{
 		return(
 		<TouchableOpacity onPress = {this.clickMe.bind(this)}>
 			<View style = {styles.box}>
+				<Text>Hello{this.props.name}. Please Click me???? </Text>
 				<Text>Hello{this.props.name}. Please Click me???? </Text>
 			</View>
 		</TouchableOpacity>
@@ -38,7 +39,7 @@ var styles = StyleSheet.create({
 		borderColor : 'red',
 		backgroundColor: '#fff',
 		borderWidth : 1,
-		width:100,
-		height :100
+		width:300,
+		height :400
 	}
 });
